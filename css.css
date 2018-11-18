@@ -1,0 +1,259 @@
+*{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	text-decoration: none;
+}
+
+
+
+
+
+
+/*firstArea*/
+.firstArea{
+	width:100%;
+	height: 630px;
+	background: #afc6ce;
+	text-align: center;
+	position: relative;
+}
+.firstArea .title{
+	position: absolute;
+	width:100%;
+	color: #fff;
+	height: 60px;
+	line-height: 60px;
+	display: none;
+	background: #75a7b0;
+}
+.firstArea .nav{
+	width:60%;
+	display: flex;
+	justify-content: space-around;
+	height: 100px;
+	line-height: 100px;
+	color: #5a5a5a;
+	font-weight: lighter;
+	font-size: 18px;
+	margin : 0 auto;
+}
+.firstArea .nav>li:hover{
+	color:#eee;
+    cursor: pointer;
+}
+.firstArea .icon{
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	right: 40px;
+	top: 20px;
+	border: 1px solid #fff;
+	display: none;
+}
+.firstArea .logo{
+	width:100%;
+    height: 200px;
+    padding-top: 100px;
+}
+.firstArea .logo p{
+    color: #fff;
+    padding-top:30px;
+    font-size: 24px;
+}
+.firstArea .button{
+	width:100%;
+	margin-top:60px;
+}
+.firstArea .button button{
+	background: #fff;
+	width:180px;
+	height: 50px;
+	font-weight: lighter;
+}
+
+/*secondArea*/
+.secondArea{
+	width: 100%;
+	height: 100px;
+	background: #fff;
+	border-bottom: 1px solid #000;
+	display: flex;
+	line-height: 100px;
+	justify-content: space-around;
+	color: #acacac;
+	font-weight: lighter;
+}
+.secondArea>li:hover{
+	color: #000;
+	cursor: pointer;
+}
+/*thirdArea*/
+.thirdArea{
+	width:100%;
+	background: #fff;
+	padding: 80px 0; 
+	text-align: center;
+}
+.thirdArea>h1{
+    color: #555;
+    font-weight: normal;
+}
+.thirdArea>p{
+	width: 60%;
+	color: #999;
+	font-size: 16px;
+	margin: 0 auto;
+	padding-top: 30px;
+	text-align: left;
+	line-height: 30px;
+}
+/*forthArea*/
+.forthArea{
+	width: 100%;
+	height: 100px;
+	background: #f4f4f4;
+	line-height: 100px;
+	display: flex;
+	justify-content: space-between;
+}
+.forthArea>span{
+	margin: 0 5%;
+}
+.forthArea>span:nth-child(1){
+	font-size: 20px;
+	color: #999;
+}
+.forthArea>span:nth-child(2){
+	font-size: 16px;
+	color: #999;
+}
+.forthArea>span>a{
+	font-size: 18px;
+	color:#555;
+	cursor: pointer;
+}
+/*fifthArea*/
+.fifthArea{
+	width: 100%;
+	background: url(素材/bg.jpg);
+}
+.fifthArea h1{
+	margin-left: 50px;
+	padding-top: 30px;
+	font-size: 22px;
+	color: #555;
+}
+.fifthArea .picture{
+	height: 420px;
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	padding: 0 30px;
+	align-content: space-around;
+}
+.fifthArea .picture>img{
+	width : 27%;
+	height: 180px;
+}
+/*sixthArea*/
+.sixthArea{
+	width: 100%;
+	height: 100px;
+	background: #f1f1f1;
+	text-align: center;
+	font-size: 16px;
+	color: #000;
+	line-height: 100px;
+}
+
+
+
+@media screen and (max-width: 700px){
+	/*第二 第四 第六部分的高度*/
+	.secondArea,.forthArea,.sixthArea{
+		height: 60px;
+		line-height: 60px;
+	}
+    /*第一部分 导航条*/
+    .firstArea .icon{
+    	display: block;
+    }
+    .firstArea .title{
+    	display: block;
+    }
+    .firstArea .nav{
+    	position:absolute;
+    	display: block;
+    	width:100%;
+    	text-align: center;
+    	height: 0px;
+    	overflow: hidden;
+    	line-height: 60px;
+    	padding-top: 60px;
+    	transition: height 0.8s;
+    }
+    .firstArea .nav.active{
+    	height: 215px;
+    }
+    .firstArea .nav>li{
+    	display: block;
+    	height: 30px;
+    	width:100%;
+    	line-height: 30px;
+    	background: #75a7b0;
+    	border-top: 1px solid #fff; 
+    	color: #fff;
+    	font-size: 16px;
+    }
+    /*第二部分 字体*/
+    .secondArea{
+    	font-size: 14px;
+    }
+    /*第三部分 字体*/
+    .thirdArea >h1{
+    	font-size: 16px;
+    }
+	.thirdArea >p{
+		font-size: 12px;
+		line-height: 24px;
+	}
+	/*第四部分 字体*/
+	.forthArea>span:nth-child(1){
+		font-size: 16px;
+		color: #999;
+	}
+	.forthArea>span:nth-child(2){
+		font-size: 14px;
+		color: #999;
+	}
+	.forthArea>span>a{
+		font-size: 16px;
+	}
+	/*第五部分 图片*/
+	.fifthArea .picture>img{
+		width : 40%;
+		height: 120px;
+	}
+	.fifthArea h1{
+		margin-left: 40px;
+		padding-top: 10px;
+		font-size: 20px;
+	}
+	/*第六部分 字体 */
+	.sixthArea{
+		font-size: 14px;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
